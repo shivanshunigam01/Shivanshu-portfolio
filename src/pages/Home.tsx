@@ -39,10 +39,18 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg">
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
-              </Button>
+
+              <a
+                href="https://drive.google.com/uc?export=download&id=12TO_iJDuEkmwLKRuToENcGWTNQndvxWZ"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </Button>
+              </a>
             </div>
 
             <div className="flex gap-6">
