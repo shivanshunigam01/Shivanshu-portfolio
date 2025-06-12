@@ -1,8 +1,16 @@
-
-import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import {
+  ArrowRight,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import myPhoto from "../my_image.png";
 
 const Home = () => {
   return (
@@ -15,14 +23,18 @@ const Home = () => {
               Hi, I'm <span className="text-portfolio-primary">Shivanshu</span>
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-              I'm a Full Stack Developer who specializes in building scalable web applications 
-              that serve millions of users. I work with modern technologies like React.js, Node.js, 
-              and have experience in government projects and renewable energy solutions.
+              I'm a Full Stack Developer who specializes in building scalable
+              web applications that serve millions of users. I work with modern
+              technologies like React.js, Node.js, and have experience in
+              government projects and renewable energy solutions.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link to="/contact">
-                <Button size="lg" className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white">
+                <Button
+                  size="lg"
+                  className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white"
+                >
                   Get In Touch
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -69,19 +81,23 @@ const Home = () => {
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">About Me</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  I am a Software Development Engineer with a Master's degree in Computer Applications 
-                  from Vellore Institute of Technology, where I achieved a CGPA of 8.38, ranking in 
-                  the top 10% of 150 students.
+                  I am a Software Development Engineer with a Master's degree in
+                  Computer Applications from Vellore Institute of Technology,
+                  where I achieved a CGPA of 8.38, ranking in the top 10% of 150
+                  students.
                 </p>
                 <p>
-                  My expertise spans across modern web technologies, with hands-on experience in 
-                  developing large-scale applications that serve millions of users. I've had the 
-                  privilege of working on government initiatives that directly impact citizens' lives, 
-                  including renewable energy projects and utility management systems.
+                  My expertise spans across modern web technologies, with
+                  hands-on experience in developing large-scale applications
+                  that serve millions of users. I've had the privilege of
+                  working on government initiatives that directly impact
+                  citizens' lives, including renewable energy projects and
+                  utility management systems.
                 </p>
                 <p>
-                  What drives me is the opportunity to create solutions that not only meet technical 
-                  requirements but also contribute to societal welfare and environmental sustainability.
+                  What drives me is the opportunity to create solutions that not
+                  only meet technical requirements but also contribute to
+                  societal welfare and environmental sustainability.
                 </p>
               </div>
               <Link to="/about">
@@ -93,7 +109,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=600&fit=crop&crop=face"
+                src={myPhoto}
                 alt="Shivanshu Nigam"
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
@@ -105,32 +121,48 @@ const Home = () => {
       {/* Experience Highlights */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">Experience</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
+            Experience
+          </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               <Card className="p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold">Software Development Engineer</h3>
-                    <p className="text-portfolio-primary font-medium">AHA Solar Technologies Limited</p>
+                    <h3 className="text-xl font-semibold">
+                      Software Development Engineer
+                    </h3>
+                    <p className="text-portfolio-primary font-medium">
+                      AHA Solar Technologies Limited
+                    </p>
                   </div>
-                  <div className="text-sm text-muted-foreground">Sep 2023 - Present</div>
+                  <div className="text-sm text-muted-foreground">
+                    Sep 2023 - Present
+                  </div>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Leading full-stack development for major government renewable energy initiatives, 
-                  serving millions of users nationwide.
+                  Leading full-stack development for major government renewable
+                  energy initiatives, serving millions of users nationwide.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div>
-                    <div className="font-semibold text-portfolio-primary">10M+</div>
-                    <div className="text-muted-foreground">Households Served</div>
+                    <div className="font-semibold text-portfolio-primary">
+                      10M+
+                    </div>
+                    <div className="text-muted-foreground">
+                      Households Served
+                    </div>
                   </div>
                   <div>
-                    <div className="font-semibold text-portfolio-primary">40+</div>
+                    <div className="font-semibold text-portfolio-primary">
+                      40+
+                    </div>
                     <div className="text-muted-foreground">APIs Developed</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-portfolio-primary">500K+</div>
+                    <div className="font-semibold text-portfolio-primary">
+                      400+
+                    </div>
                     <div className="text-muted-foreground">Active Users</div>
                   </div>
                 </div>
@@ -140,20 +172,25 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">AI Trainer</h3>
-                    <p className="text-portfolio-primary font-medium">Scale AI</p>
+                    <p className="text-portfolio-primary font-medium">
+                      Scale AI
+                    </p>
                   </div>
-                  <div className="text-sm text-muted-foreground">Nov 2022 - Aug 2023</div>
+                  <div className="text-sm text-muted-foreground">
+                    Nov 2022 - Aug 2023
+                  </div>
                 </div>
                 <p className="text-muted-foreground">
-                  Specialized in training and evaluating AI models, providing critical feedback 
-                  for performance improvements and accuracy enhancements.
+                  Specialized in training and evaluating AI models, providing
+                  critical feedback for performance improvements and accuracy
+                  enhancements.
                 </p>
               </Card>
             </div>
-            
+
             <div className="text-center mt-8">
               <Link to="/experience">
-                <Button variant="outline">
+                <Button variant="default">
                   View Full Experience
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -166,7 +203,9 @@ const Home = () => {
       {/* Featured Projects */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
+            Featured Projects
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
               <img
@@ -175,13 +214,17 @@ const Home = () => {
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">PM Surya Ghar Yojana Portal</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  PM Surya Ghar Yojana Portal
+                </h3>
                 <p className="text-muted-foreground mb-4">
-                  Government initiative enabling 10 million households to apply for rooftop 
-                  solar installations and receive subsidies.
+                  Government initiative enabling 10 million households to apply
+                  for rooftop solar installations and receive subsidies.
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-portfolio-primary font-medium">Government Project</span>
+                  <span className="text-sm text-portfolio-primary font-medium">
+                    Government Project
+                  </span>
                   <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -194,13 +237,17 @@ const Home = () => {
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">BSES Rajdhani Solar Portal</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  BSES Rajdhani Solar Portal
+                </h3>
                 <p className="text-muted-foreground mb-4">
-                  Specialized portal for BSES Rajdhani consumers in Delhi to apply for 
-                  rooftop solar systems and track applications.
+                  Specialized portal for BSES Rajdhani consumers in Delhi to
+                  apply for rooftop solar systems and track applications.
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-portfolio-primary font-medium">Energy Sector</span>
+                  <span className="text-sm text-portfolio-primary font-medium">
+                    Energy Sector
+                  </span>
                   <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -209,7 +256,7 @@ const Home = () => {
 
           <div className="text-center mt-8">
             <Link to="/projects">
-              <Button variant="outline">
+              <Button variant="default">
                 View All Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -222,15 +269,21 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Let's Work Together</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+              Let's Work Together
+            </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I'm always excited about new opportunities and collaborations. 
-              Let's discuss how we can work together to create something amazing.
+              I'm always excited about new opportunities and collaborations.
+              Let's discuss how we can work together to create something
+              amazing.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link to="/contact">
-                <Button size="lg" className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white">
+                <Button
+                  size="lg"
+                  className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white"
+                >
                   Get In Touch
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>

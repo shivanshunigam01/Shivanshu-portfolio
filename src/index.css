@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,12 +36,41 @@
 
     --radius: 0.75rem;
 
-    /* Portfolio specific colors - cleaner, more professional */
-    --portfolio-primary: 59 130 246;
-    --portfolio-secondary: 139 92 246;
-    --portfolio-accent: 34 197 94;
-    --portfolio-gradient-start: 59 130 246;
-    --portfolio-gradient-end: 139 92 246;
+    /* Enhanced Portfolio Colors - Vibrant & Modern */
+    --portfolio-primary: 268 83% 58%; /* Purple */
+    --portfolio-secondary: 217 91% 60%; /* Blue */
+    --portfolio-accent: 142 69% 58%; /* Green */
+    --portfolio-warning: 43 96% 56%; /* Yellow */
+    --portfolio-error: 0 84% 60%; /* Red */
+    --portfolio-success: 142 69% 58%; /* Green */
+    --portfolio-info: 199 89% 48%; /* Cyan */
+    --portfolio-pink: 330 81% 60%; /* Pink */
+    --portfolio-orange: 25 95% 53%; /* Orange */
+    --portfolio-indigo: 239 84% 67%; /* Indigo */
+
+    /* Gradient combinations */
+    --portfolio-gradient-primary: linear-gradient(
+      135deg,
+      hsl(268 83% 58%),
+      hsl(217 91% 60%)
+    );
+    --portfolio-gradient-secondary: linear-gradient(
+      135deg,
+      hsl(142 69% 58%),
+      hsl(199 89% 48%)
+    );
+    --portfolio-gradient-accent: linear-gradient(
+      135deg,
+      hsl(330 81% 60%),
+      hsl(25 95% 53%)
+    );
+    --portfolio-gradient-rainbow: linear-gradient(
+      135deg,
+      hsl(268 83% 58%),
+      hsl(217 91% 60%),
+      hsl(142 69% 58%),
+      hsl(25 95% 53%)
+    );
   }
 
   .dark {
@@ -74,10 +102,14 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
 
-    /* Dark mode portfolio colors */
-    --portfolio-primary: 99 179 237;
-    --portfolio-secondary: 167 139 250;
-    --portfolio-accent: 52 211 153;
+    /* Dark mode portfolio colors - slightly adjusted for better contrast */
+    --portfolio-primary: 268 83% 65%;
+    --portfolio-secondary: 217 91% 65%;
+    --portfolio-accent: 142 69% 65%;
+    --portfolio-warning: 43 96% 65%;
+    --portfolio-pink: 330 81% 65%;
+    --portfolio-orange: 25 95% 60%;
+    --portfolio-indigo: 239 84% 72%;
   }
 }
 
@@ -88,37 +120,71 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
     line-height: 1.2;
     letter-spacing: -0.025em;
   }
 }
 
-/* Custom animations - simplified */
+/* Enhanced animations with color transitions */
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(20px); 
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes slideInFromLeft {
-  0% { transform: translateX(-50px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInFromRight {
-  0% { transform: translateX(50px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes colorShift {
+  0%,
+  100% {
+    background: linear-gradient(135deg, hsl(268 83% 58%), hsl(217 91% 60%));
+  }
+  25% {
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(142 69% 58%));
+  }
+  50% {
+    background: linear-gradient(135deg, hsl(142 69% 58%), hsl(25 95% 53%));
+  }
+  75% {
+    background: linear-gradient(135deg, hsl(25 95% 53%), hsl(330 81% 60%));
+  }
 }
 
 .animate-fade-in {
@@ -133,31 +199,116 @@
   animation: slideInFromRight 0.8s ease-out;
 }
 
-/* Hover effects - more subtle */
+.animate-color-shift {
+  animation: colorShift 8s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+/* Enhanced hover effects with colors */
 .hover-lift {
   transition: all 0.3s ease;
 }
 
 .hover-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(142, 69, 133, 0.2);
 }
 
-/* Text gradient for accents */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px hsl(var(--portfolio-primary) / 0.3);
+}
+
+/* Enhanced text gradients */
 .gradient-text {
-  background: linear-gradient(135deg, rgb(var(--portfolio-primary)), rgb(var(--portfolio-secondary)));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--portfolio-primary)),
+    hsl(var(--portfolio-secondary))
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Clean section dividers */
-.section-divider {
-  border-bottom: 1px solid hsl(var(--border));
+.gradient-text-rainbow {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--portfolio-primary)),
+    hsl(var(--portfolio-secondary)),
+    hsl(var(--portfolio-accent)),
+    hsl(var(--portfolio-pink))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: colorShift 6s ease-in-out infinite;
 }
 
-/* Improved focus states */
+/* Colorful section backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--portfolio-primary) / 0.1),
+    hsl(var(--portfolio-secondary) / 0.1)
+  );
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--portfolio-accent) / 0.1),
+    hsl(var(--portfolio-info) / 0.1)
+  );
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--portfolio-pink) / 0.1),
+    hsl(var(--portfolio-orange) / 0.1)
+  );
+}
+
+/* Enhanced section dividers with color */
+.section-divider {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+      90deg,
+      hsl(var(--portfolio-primary)),
+      hsl(var(--portfolio-secondary)),
+      hsl(var(--portfolio-accent))
+    )
+    1;
+}
+
+/* Colorful focus states */
 .focus-visible:focus-visible {
-  outline: 2px solid rgb(var(--portfolio-primary));
+  outline: 2px solid hsl(var(--portfolio-primary));
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--portfolio-primary) / 0.2);
+}
+
+/* Colorful button variants */
+.btn-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--portfolio-primary)),
+    hsl(var(--portfolio-secondary))
+  );
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--portfolio-secondary)),
+    hsl(var(--portfolio-accent))
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px hsl(var(--portfolio-primary) / 0.3);
 }
