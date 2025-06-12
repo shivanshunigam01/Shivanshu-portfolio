@@ -71,6 +71,23 @@
       hsl(142 69% 58%),
       hsl(25 95% 53%)
     );
+    /* Enhanced Portfolio Colors - Vibrant & Modern */
+    --portfolio-primary: 268 83% 58%; /* Purple */
+    --portfolio-secondary: 217 91% 60%; /* Blue */
+    --portfolio-accent: 142 69% 58%; /* Green */
+    --portfolio-warning: 43 96% 56%; /* Yellow */
+    --portfolio-error: 0 84% 60%; /* Red */
+    --portfolio-success: 142 69% 58%; /* Green */
+    --portfolio-info: 199 89% 48%; /* Cyan */
+    --portfolio-pink: 330 81% 60%; /* Pink */
+    --portfolio-orange: 25 95% 53%; /* Orange */
+    --portfolio-indigo: 239 84% 67%; /* Indigo */
+    
+    /* Gradient combinations */
+    --portfolio-gradient-primary: linear-gradient(135deg, hsl(268 83% 58%), hsl(217 91% 60%));
+    --portfolio-gradient-secondary: linear-gradient(135deg, hsl(142 69% 58%), hsl(199 89% 48%));
+    --portfolio-gradient-accent: linear-gradient(135deg, hsl(330 81% 60%), hsl(25 95% 53%));
+    --portfolio-gradient-rainbow: linear-gradient(135deg, hsl(268 83% 58%), hsl(217 91% 60%), hsl(142 69% 58%), hsl(25 95% 53%));
   }
 
   .dark {
@@ -161,28 +178,21 @@
 }
 
 @keyframes slideInFromRight {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes colorShift {
-  0%,
-  100% {
+  0%, 100% { 
     background: linear-gradient(135deg, hsl(268 83% 58%), hsl(217 91% 60%));
   }
-  25% {
+  25% { 
     background: linear-gradient(135deg, hsl(217 91% 60%), hsl(142 69% 58%));
   }
-  50% {
+  50% { 
     background: linear-gradient(135deg, hsl(142 69% 58%), hsl(25 95% 53%));
   }
-  75% {
+  75% { 
     background: linear-gradient(135deg, hsl(25 95% 53%), hsl(330 81% 60%));
   }
 }
@@ -229,6 +239,7 @@
     hsl(var(--portfolio-primary)),
     hsl(var(--portfolio-secondary))
   );
+  background: linear-gradient(135deg, hsl(var(--portfolio-primary)), hsl(var(--portfolio-secondary)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -275,6 +286,34 @@
 }
 
 /* Enhanced section dividers with color */
+.gradient-text-rainbow {
+  background: linear-gradient(135deg, 
+    hsl(var(--portfolio-primary)), 
+    hsl(var(--portfolio-secondary)), 
+    hsl(var(--portfolio-accent)), 
+    hsl(var(--portfolio-pink))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: colorShift 6s ease-in-out infinite;
+}
+
+/* Colorful section backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, hsl(var(--portfolio-primary) / 0.1), hsl(var(--portfolio-secondary) / 0.1));
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, hsl(var(--portfolio-accent) / 0.1), hsl(var(--portfolio-info) / 0.1));
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, hsl(var(--portfolio-pink) / 0.1), hsl(var(--portfolio-orange) / 0.1));
+}
+
+/* Enhanced section dividers with color */
 .section-divider {
   border-bottom: 2px solid;
   border-image: linear-gradient(
@@ -284,6 +323,12 @@
       hsl(var(--portfolio-accent))
     )
     1;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, 
+    hsl(var(--portfolio-primary)), 
+    hsl(var(--portfolio-secondary)), 
+    hsl(var(--portfolio-accent))
+  ) 1;
 }
 
 /* Colorful focus states */
@@ -309,6 +354,19 @@
     hsl(var(--portfolio-secondary)),
     hsl(var(--portfolio-accent))
   );
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px hsl(var(--portfolio-primary) / 0.3);
+  box-shadow: 0 0 0 4px hsl(var(--portfolio-primary) / 0.2);
+}
+
+/* Colorful button variants */
+.btn-gradient {
+  background: linear-gradient(135deg, hsl(var(--portfolio-primary)), hsl(var(--portfolio-secondary)));
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, hsl(var(--portfolio-secondary)), hsl(var(--portfolio-accent)));
   transform: translateY(-2px);
   box-shadow: 0 10px 25px hsl(var(--portfolio-primary) / 0.3);
 }
