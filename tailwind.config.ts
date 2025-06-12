@@ -57,6 +57,13 @@ export default {
 					primary: 'hsl(var(--portfolio-primary))',
 					secondary: 'hsl(var(--portfolio-secondary))',
 					accent: 'hsl(var(--portfolio-accent))',
+					warning: 'hsl(var(--portfolio-warning))',
+					error: 'hsl(var(--portfolio-error))',
+					success: 'hsl(var(--portfolio-success))',
+					info: 'hsl(var(--portfolio-info))',
+					pink: 'hsl(var(--portfolio-pink))',
+					orange: 'hsl(var(--portfolio-orange))',
+					indigo: 'hsl(var(--portfolio-indigo))',
 				}
 			},
 			borderRadius: {
@@ -86,19 +93,42 @@ export default {
 					'50%': { transform: 'translateY(-20px)' }
 				},
 				glow: {
-					'0%, 100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)' },
-					'50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.6)' }
+					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--portfolio-primary) / 0.3)' },
+					'50%': { boxShadow: '0 0 40px hsl(var(--portfolio-primary) / 0.6)' }
+				},
+				'color-shift': {
+					'0%, 100%': { 
+						backgroundPosition: '0% 50%'
+					},
+					'50%': { 
+						backgroundPosition: '100% 50%'
+					}
+				},
+				pulse: {
+					'0%, 100%': { 
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': { 
+						transform: 'scale(1.05)',
+						opacity: '0.8'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				float: 'float 6s ease-in-out infinite',
-				glow: 'glow 2s ease-in-out infinite'
+				glow: 'glow 2s ease-in-out infinite',
+				'color-shift': 'color-shift 8s ease-in-out infinite',
+				'pulse-gentle': 'pulse 3s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'portfolio-gradient': 'linear-gradient(135deg, hsl(var(--portfolio-gradient-start)), hsl(var(--portfolio-gradient-end)))'
+				'portfolio-gradient': 'linear-gradient(135deg, hsl(var(--portfolio-primary)), hsl(var(--portfolio-secondary)))',
+				'portfolio-gradient-secondary': 'linear-gradient(135deg, hsl(var(--portfolio-accent)), hsl(var(--portfolio-info)))',
+				'portfolio-gradient-accent': 'linear-gradient(135deg, hsl(var(--portfolio-pink)), hsl(var(--portfolio-orange)))',
+				'portfolio-gradient-rainbow': 'linear-gradient(135deg, hsl(var(--portfolio-primary)), hsl(var(--portfolio-secondary)), hsl(var(--portfolio-accent)), hsl(var(--portfolio-pink)))'
 			}
 		}
 	},
