@@ -15,20 +15,32 @@ const Experience = () => {
       company: "200Ok Solutions",
       role: "Full Stack Developer",
       location: "Ahmedabad, India",
-      period: "Present",
+      period: "April 2025 - Present",
       type: "Current",
       description:
         "Currently working as a Full Stack Developer, contributing to various web applications and maintaining high-quality code standards.",
-      projects: [],
-      technologies: ["React.js", "Node.js", "JavaScript", "MongoDB"],
-      achievements: [],
+      projects: [
+        {
+          name: "The Manor & Ashbury Resorts",
+          description:
+            "A dual-resort destination in Devon, England offering 70+ activities, spa services, and one of the world’s largest golf resorts.",
+          impact:
+            "Catering to thousands of guests yearly with inter-resort access and leisure-focused experiences",
+        },
+      ],
+      technologies: ["React", "PHP", "SQL", "Bitbucket", "DevOps"],
+      achievements: [
+        "Ranked as the 9th largest golf resort in the world",
+        "70+ in-house activities including sports, crafts, spa, and leisure",
+        "Innovative dual-resort model offering shared guest access across locations",
+      ],
     },
     {
       id: 2,
       company: "AHA Solar Technologies Limited",
       role: "Software Development Engineer",
       location: "Ahmedabad, India",
-      period: "Sep 2023 - Present",
+      period: "Sep 2023 - Apr 2025",
       type: "Full-time",
       description:
         "Leading full-stack development for major government renewable energy initiatives, serving millions of users nationwide.",

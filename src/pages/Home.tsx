@@ -134,6 +134,53 @@ const Home = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
+              {/* 200Ok Solutions */}
+              <Card className="p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold">
+                      Full Stack Developer
+                    </h3>
+                    <p className="text-portfolio-primary font-medium">
+                      200Ok Solutions
+                    </p>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    April 2025 - Present
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Currently working as a Full Stack Developer, contributing to
+                  various web applications and maintaining high-quality code
+                  standards.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <div className="font-semibold text-portfolio-primary">
+                      9th
+                    </div>
+                    <div className="text-muted-foreground">
+                      Largest Golf Resort
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-portfolio-primary">
+                      70+
+                    </div>
+                    <div className="text-muted-foreground">
+                      Activities Offered
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-portfolio-primary">
+                      1000s
+                    </div>
+                    <div className="text-muted-foreground">Guests Served</div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* AHA Solar */}
               <Card className="p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
@@ -145,7 +192,7 @@ const Home = () => {
                     </p>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    Sep 2023 - Present
+                    Sep 2023 - Apr 2025
                   </div>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -176,6 +223,7 @@ const Home = () => {
                 </div>
               </Card>
 
+              {/* Scale AI */}
               <Card className="p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>

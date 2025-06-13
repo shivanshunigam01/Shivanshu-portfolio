@@ -1,4 +1,11 @@
-import { ExternalLink, Github, Calendar, Users, Zap } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Calendar,
+  Users,
+  Zap,
+  Building2,
+} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -92,6 +99,25 @@ const Projects = () => {
       impact: "Coastal Protection",
       status: "Live",
     },
+    {
+      id: 5,
+      title: "The Manor & Ashbury Resorts",
+      description:
+        "A dual-resort destination in Devon, England offering guests access to both resorts with 70+ activities including sports, crafts, spa, and extensive golf courses. Known for being the 9th largest golf resort in the world.",
+      image:
+        "https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,f_jpg,h_822,q_75,w_1220/https://swtdmsmedia.newmindmedia.com/wsimgs/manor_ashbury_10_1217983698.jpg",
+      technologies: ["React", "PHP", "SQL", "Bitbucket", "DevOps"],
+      features: [
+        "Dual-resort model with shared guest access",
+        "Over 70 sports, leisure, spa and craft activities",
+        "Ranked 9th largest golf resort in the world",
+        "Extensive spa with treatments including the Mud Rasul",
+      ],
+      url: "https://www.manorandashburyresorts.co.uk/",
+      category: "Hospitality",
+      impact: "Thousands of guests served yearly",
+      status: "Live",
+    },
   ];
 
   const getCategoryIcon = (category: string) => {
@@ -102,6 +128,8 @@ const Projects = () => {
         return <Zap className="h-4 w-4" />;
       case "Sustainability":
         return <Calendar className="h-4 w-4" />;
+      case "Hospitality":
+        return <Building2 className="h-4 w-4" />;
       default:
         return <Calendar className="h-4 w-4" />;
     }
@@ -115,6 +143,8 @@ const Projects = () => {
         return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200";
       case "Sustainability":
         return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200";
+      case "Hospitality":
+        return "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200";
       default:
         return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
     }
@@ -211,9 +241,9 @@ const Projects = () => {
                       Live Demo
                     </a>
                   </Button>
-                  <Button variant="outline" size="icon" className="hover-glow">
+                  {/* <Button variant="outline" size="icon" className="hover-glow">
                     <Github className="h-4 w-4" />
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </Card>
